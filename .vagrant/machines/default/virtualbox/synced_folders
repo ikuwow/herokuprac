@@ -1,0 +1,1 @@
+{"nfs":{"/vagrant":{"nfs":true,"guestpath":"/vagrant","hostpath":"/Users/degawaikuo/workspace/herokuprac","disabled":false,"type":"nfs","map_uid":501,"map_gid":20,"nfs_udp":true,"nfs_version":3,"uuid":"1819375926"}}}
