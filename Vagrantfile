@@ -9,6 +9,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # options are documented and commented below. For a complete reference,
   # please see the online documentation at vagrantup.com.
 
+  config.vm.hostname = "herokuprac"
   # Every Vagrant virtual environment requires a box to build off of.
   config.vm.box = "notgary/ubuntu-14-04-base"
 
@@ -61,6 +62,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provider "virtualbox" do |vb|
       vb.customize ["modifyvm", :id, "--memory", "512"]
   end
+
+  config.vm.provision "shell", inline: "aptitude update"
 
   # Enable provisioning with CFEngine. CFEngine Community packages are
   # automatically installed. For example, configure the host as a
